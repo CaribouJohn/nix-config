@@ -127,6 +127,14 @@
     zsh-syntax-highlighting
     zsh-history-substring-search
     nixpkgs-fmt
+    clang_17
+    llvmPackages_17.bintools
+    dart
+    flutter
+    google-chrome
+    android-studio
+    android-tools
+    zulu17
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
