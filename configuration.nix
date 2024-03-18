@@ -16,7 +16,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "beast"; # Define your hostname.
+  networking.hostName = "beast-nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -150,6 +150,10 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  environment.sessionVariables = rec {
+    CHROME_EXECUTABLE="${pkgs.google-chrome}/bin/google-chrome-stable";
+  };
+  
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
