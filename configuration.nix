@@ -135,6 +135,7 @@
     android-studio
     android-tools
     zulu17
+    gh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
