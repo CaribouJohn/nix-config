@@ -136,6 +136,7 @@
     android-tools
     zulu17
     gh
+    podman
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
