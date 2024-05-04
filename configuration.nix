@@ -25,6 +25,15 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  services.udisks2.enable = true;
+
+  fileSystems = {
+    "/".device = "/dev/hda1";
+    "/mnt/storage" = {
+      device = "/dev/sde";
+      fsType = "ext3";
+    };
+}
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -137,6 +146,7 @@
     zulu17
     gh
     podman
+    podman-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -177,5 +187,16 @@
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
 
+  virtualisation = {
+    podman = {
+      enable = true;
+
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = false;
+    };
+  };
 
 }

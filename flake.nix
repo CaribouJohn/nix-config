@@ -30,7 +30,7 @@
       };
       
       nixosConfigurations = {
-        beast = nixpkgs.lib.nixosSystem {
+        beast-nix = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./configuration.nix # Your system configuration.
