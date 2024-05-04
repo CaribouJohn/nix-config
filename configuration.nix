@@ -27,14 +27,6 @@
   networking.networkmanager.enable = true;
   services.udisks2.enable = true;
 
-  fileSystems = {
-    "/".device = "/dev/hda1";
-    "/mnt/storage" = {
-      device = "/dev/sde";
-      fsType = "ext3";
-    };
-}
-
   # Set your time zone.
   time.timeZone = "Europe/London";
 
