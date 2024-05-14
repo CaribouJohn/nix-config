@@ -20,6 +20,11 @@
       fsType = "ext4";
     };
   fileSystems."/mnt/storage" =
+    { device = "/dev/sdd1";
+      fsType = "ntfs-3g";
+      options = [ "rw" ];
+    };
+  fileSystems."/mnt/backup" =
     { device = "/dev/sde1";
       fsType = "ntfs-3g";
       options = [ "rw" ];
