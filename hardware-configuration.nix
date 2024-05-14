@@ -19,16 +19,19 @@
     { device = "/dev/disk/by-uuid/43fb3323-55d1-4f8f-82f3-f552c64a7b15";
       fsType = "ext4";
     };
+  fileSystems."/mnt/docker" =
+    { device = "/dev/sdb1";
+      fsType = "ext4";
+    };
   fileSystems."/mnt/storage" =
-    { device = "/dev/sdd1";
-      fsType = "ntfs-3g";
-      options = [ "rw" ];
+    { device = "/dev/sdc1";
+      fsType = "ext4";
     };
-  fileSystems."/mnt/backup" =
-    { device = "/dev/sde1";
-      fsType = "ntfs-3g";
-      options = [ "rw" ];
-    };
+  #fileSystems."/mnt/backup" =
+  #  { device = "/dev/sde1";
+  #    fsType = "ntfs-3g";
+  #    options = [ "rw" ];
+  #  };
 
   swapDevices = [ ];
 

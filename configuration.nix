@@ -139,6 +139,7 @@
     gh
     podman
     podman-compose
+    gparted
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
