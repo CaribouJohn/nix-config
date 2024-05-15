@@ -19,20 +19,20 @@
     { device = "/dev/disk/by-uuid/43fb3323-55d1-4f8f-82f3-f552c64a7b15";
       fsType = "ext4";
     };
-  fileSystems."/mnt/docker" =
-    { device = "/dev/sdb1";
-      fsType = "ext4";
-    };
   fileSystems."/mnt/storage" =
-    { device = "/dev/sdc1";
+    { device = "/dev/disk/by-uuid/b8bc1bf8-decd-4bf7-9b50-0bcd60934280";
       fsType = "ext4";
     };
-  #fileSystems."/mnt/backup" =
-  #  { device = "/dev/sde1";
-  #    fsType = "ntfs-3g";
-  #    options = [ "rw" ];
-  #  };
-
+  fileSystems."/mnt/docker" =
+    { device = "/dev/disk/by-uuid/224afe68-872a-46b7-997f-13872b2a8236";
+      fsType = "ext4";
+    };
+  fileSystems."/mnt/backup" =
+    { device = "/dev/disk/by-uuid/D0447CFE447CE91C";
+      fsType = "ntfs-3g";
+      options = ["rw"]
+    };
+  
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
