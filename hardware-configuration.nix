@@ -27,11 +27,11 @@
     { device = "/dev/disk/by-uuid/224afe68-872a-46b7-997f-13872b2a8236";
       fsType = "ext4";
     };
-  fileSystems."/mnt/backup" =
-    { device = "/dev/disk/by-uuid/D0447CFE447CE91C";
-      fsType = "ntfs-3g";
-      options = ["rw"]
-    };
+  // fileSystems."/mnt/backup" =
+  //   { device = "/dev/disk/by-uuid/D0447CFE447CE91C";
+  //     fsType = "ntfs-3g";
+  //     options = ["rw"];
+  //   };
   
   swapDevices = [ ];
 
