@@ -179,22 +179,29 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
-
-  virtualisation = {
-    podman = {
-      enable = true;
-
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
-
-      # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = false;
-    };
-  };
-
+  
   services.plex = {
     enable = true;
     openFirewall = true;
   };
+
+  services.sonarr = {
+    dataDir = "/mnt/storage/config/radarr/sonarr";
+    enable = true;
+    openFirewall = true;
+  };
+
+  services.radarr = {
+      dataDir = "/mnt/storage/config/radarr/radarr";
+      enable = true;
+      openFirewall = true;
+  };
+
+  services.sabnzbd = {
+  enable = true;
+  openFirewall = true;
+  };
+
+
 
 }
