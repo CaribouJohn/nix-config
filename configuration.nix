@@ -140,6 +140,11 @@
     podman
     podman-compose
     gparted
+    rustup
+    rust-analyzer
+    cargo 
+    clippy
+    gcc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
