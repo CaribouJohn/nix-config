@@ -206,6 +206,7 @@
   services.sabnzbd = {
   enable = true;
   openFirewall = true;
+  user="john";
   };
 
 
